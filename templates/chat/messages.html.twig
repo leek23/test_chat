@@ -1,0 +1,8 @@
+{% for message in messages|reverse %}
+
+<div class="message new">
+    <div class="avatar">{{ message.getUserName() }}</div>
+    {{ message.getMessage() }}
+    <div class="timestamp">{{ message.getDateTime() }}</div>
+</div>
+{% endfor %}

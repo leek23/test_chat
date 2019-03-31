@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/style.css') }}"/>
+{% endblock %}
+
+{% block body %}
+<div class="chat">
+    <div class="chat-title">
+    </div>
+    <div class="messages">
+        <div class="messages-content"></div>
+    </div>
+    <div class="message-box">
+        <textarea type="text" class="message-input" placeholder="Type message..."></textarea>
+        <button type="submit" class="message-submit">Send</button>
+    </div>
+
+</div>
+<div class="bg"></div>
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="{{ asset('assets/js.js') }}"></script>
+{% endblock %}

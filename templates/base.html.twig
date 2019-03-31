@@ -2,11 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>
+            {% if block("title") is defined %}
+                {{ block('title') }}
+            {% endif %}
+        </title>
+        {% if block("stylesheets") is defined %}
+            {{ block('stylesheets') }}
+        {% endif %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {{ block('body') }}
+
+    {% if block("javascripts") is defined %}
+        {{ block('javascripts') }}
+    {% endif %}
     </body>
 </html>
